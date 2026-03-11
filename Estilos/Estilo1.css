@@ -192,9 +192,40 @@ footer {
     transform: scale(1.1);
     z-index: 0;
 }
+/* MENSAJES PARA EL ALMA */
+
+.frases{
+    background-color: var(--lila-suave);
+}
+
+.carousel-caption{
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.carousel-caption p{
+    font-size: 1.3rem;
+    font-style: italic;
+    color: white;
+}
+
+/* carrusel vertical */
+
+.carrusel-frases{
+    max-width: 400px;
+    margin: auto;
+}
+
+.frase-img{
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
 
 /* Contenido encima */
 .header-bg nav {
     position: relative;
     z-index: 1;
+
 }
