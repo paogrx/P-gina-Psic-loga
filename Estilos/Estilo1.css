@@ -192,6 +192,14 @@ footer {
     transform: scale(1.1);
     z-index: 0;
 }
+
+/* Contenido encima */
+.header-bg nav {
+    position: relative;
+    z-index: 1;
+}
+
+
 /* MENSAJES PARA EL ALMA */
 
 .frases{
@@ -221,11 +229,4 @@ footer {
     height: 500px;
     object-fit: cover;
     border-radius: 12px;
-}
-
-/* Contenido encima */
-.header-bg nav {
-    position: relative;
-    z-index: 1;
-
 }
