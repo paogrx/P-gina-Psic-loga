@@ -1,317 +1,260 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* VARIABLES COLORES */
+:root {
+    --morado-principal: #4b1f78;
+    --morado-secundario: #712191;
+    --lila-suave: #f4effa;
+    --rojo-acento: #8b1e1e;
+    --negro-texto: #2b2b2b;
+    --blanco: #ffffff;
+}
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+/* GENERAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--negro-texto);
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f3fc 100%);
+}
 
-    <link rel="stylesheet" href="Estilos/Estilo1.css">
+* {
+    transition: all 0.3s ease;
+}
 
-    <title>Psic. Sara Margarita Sánchez Chablé</title>
-</head>
+/* NAV */
+nav {
+    background-color: var(--blanco);
+    border-bottom: 3px solid var(--morado-principal);
+}
 
-<body>
+.logo {
+    max-width: 170px;
+}
 
-<header class="header-bg">
-    <nav class="shadow-sm py-3">
-        <section class="container text-center">
-            <img src="img/logo.jpeg" alt="Logo Psicotanatología Por Amor" class="logo mb-2">
-            <a href="#" class="brand-name">
-                Psic. Sara Margarita Sánchez Chablé.
-            </a>
-        </section>
-    </nav>
-</header>
+.brand-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    color: var(--morado-principal);
+}
 
-<main>
+.brand-name:hover {
+    color: var(--morado-secundario);
+}
 
-<!-- HERO -->
-<section class="hero text-center">
-    <article class="container">
-        <h1>Psicotanatología</h1>
-        <p class="lead">
-            Acompañamiento emocional profesional en modalidad presencial y en línea.
-        </p>
-        <p class="lema">
-            "EN LA ADVERSIDAD DOS SON MEJOR QUE UNO"
-        </p>
-    </article>
-</section>
+/* HERO */
+.hero {
+    background-color: var(--lila-suave);
+    padding: 110px 0;
+}
 
-<!-- SOBRE MI -->
-<section class="py-5">
-    <section class="container">
-        <section class="row align-items-center">
+.hero h1 {
+    color: var(--morado-principal);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
 
-            <article class="col-md-6">
-                <h2>Sobre mí</h2>
+.hero .lema {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--morado-secundario);
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
 
-                <p>
-                    Profesional comprometida con el acompañamiento emocional,
-                    brindando un espacio seguro, humano y confidencial.
-                </p>
+.hero .lema::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: var(--rojo-acento);
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
 
-                <p>
-                    <strong>Ced. Lic.:</strong> 11855569<br>
-                    <strong>Ced. Mstría.:</strong> 15366223
-                </p>
+/* TITULOS */
+section h2 {
+    color: var(--morado-principal);
+    margin-bottom: 25px;
+    font-weight: 700;
+    position: relative;
+}
 
-                <p>
-                    <strong>Especialidad:</strong> Psicotanatología y Tanatología
-                </p>
-            </article>
+/* Línea decorativa */
+section h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--rojo-acento);
+    margin-top: 8px;
+}
 
-            <article class="col-md-6 text-center">
-                <img src="img/qrInfo.jpg"
-                     width="500"
-                     class="img-fluid rounded shadow">
-            </article>
+/* Alterna fondo suave en secciones */
+section.py-5:nth-of-type(even) {
+    background-color: var(--lila-suave);
+}
 
-        </section>
-    </section>
-</section>
+/* SERVICIOS */
+.service-card {
+    border-radius: 12px;
+    padding: 25px;
+    background-color: var(--blanco);
+    border: 1px solid #eee;
+}
 
-<!-- SERVICIOS -->
-<section class="py-5 bg-light">
-    <section class="container text-center">
-        <h2>Servicios</h2>
+.service-card h5 {
+    color: var(--morado-principal);
+    font-weight: 600;
+}
 
-        <section class="row mt-4 g-4">
+.service-card:hover {
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
 
-            <article class="col-md-4">
-                <section class="service-card shadow-sm">
-                    <h5>Terapia Individual</h5>
-                    <img src="img/induvidual.jfif" width="100px">
-                    <p>Espacio para trabajar emociones y situaciones personales.</p>
-                </section>
-            </article>
+/* AREAS DE ATENCION */
 
-            <article class="col-md-4">
-                <section class="service-card shadow-sm">
-                    <h5>Terapia Presencial</h5>
-                    <img src="img/terapia-presencial.jpg" width="100px">
-                    <p>Atención en consultorio en un entorno profesional.</p>
-                </section>
-            </article>
+.areas {
+    background-color: var(--lila-suave);
+}
 
-            <article class="col-md-4">
-                <section class="service-card shadow-sm">
-                    <h5>Terapia en Línea</h5>
-                    <img src="img/terapiaLinea.png" width="140px">
-                    <p>Sesiones virtuales con total confidencialidad.</p>
-                </section>
-            </article>
+.area-card {
+    border-radius: 15px;
+    background-color: var(--blanco);
+    border: 1px solid #eee;
+    padding: 20px;
+}
 
-            <article class="col-md-4">
-                <section class="service-card shadow-sm">
-                    <h5>Valoración Psicométrica</h5>
-                    <img src="img/pruebapsicom.png" width="100px">
-                    <p>Evaluación psicológica detallada para comprender mejor tu perfil emocional.</p>
-                </section>
-            </article>
+.area-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
 
-            <article class="col-md-4">
-                <section class="service-card shadow-sm">
-                    <h5>Talleres y pláticas</h5>
-                    <img src="img/talleres.png" width="100px">
-                    <p>Actividades educativas para profundizar en temas de interés.</p>
-                </section>
-            </article>
+/* Iconos */
+.area-icon {
+    font-size: 40px;
+    color: var(--morado-principal);
+    margin-bottom: 12px;
+    display: block;
+}
 
-            <article class="col-md-4">
-                <section class="service-card shadow-sm">
-                    <h5>Orientación vocacional</h5>
-                    <img src="img/orientacion.webp" width="100px">
-                    <p>Asesoramiento para tomar decisiones importantes sobre tu futuro profesional.</p>
-                </section>
-            </article>
+/* Título */
+.area-card h5 {
+    color: var(--morado-principal);
+    font-weight: 600;
+    margin-top: 8px;
+}
 
-        </section>
-    </section>
-</section>
+/* CONTACTO */
+.contact {
+    background-color: var(--lila-suave);
+}
 
-<!-- AREAS -->
-<section class="py-5 areas">
-    <section class="container text-center">
+.contact strong {
+    color: var(--morado-principal);
+}
 
-        <h2 class="mb-5">Áreas de atención</h2>
+/* FOOTER */
+footer {
+    background-color: var(--morado-principal);
+}
+.header-bg {
+    position: relative;
+    height: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* REDES SOCIALES */
 
-        <section class="row g-4 justify-content-center">
+.redes a{
+    color: white;
+    font-size: 28px;
+    margin: 0 12px;
+    text-decoration: none;
+}
 
-            <article class="col-md-6 col-lg-4">
-                <section class="card area-card h-100 shadow-sm border-0">
-                    <section class="card-body text-center">
-                        <i class="bi bi-emoji-frown area-icon"></i>
-                        <h5>Ansiedad</h5>
-                    </section>
-                </section>
-            </article>
+.redes a:hover{
+    color: #e0d2f3;
+    transform: scale(1.2);
+}
 
-            <article class="col-md-6 col-lg-4">
-                <section class="card area-card h-100 shadow-sm border-0">
-                    <section class="card-body text-center">
-                        <i class="bi bi-lightning-charge area-icon"></i>
-                        <h5>Estrés</h5>
-                    </section>
-                </section>
-            </article>
+/* Imagen blur */
+.header-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/fondoheader.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    transform: scale(1.1);
+    z-index: 0;
+}
 
-            <article class="col-md-6 col-lg-4">
-                <section class="card area-card h-100 shadow-sm border-0">
-                    <section class="card-body text-center">
-                        <i class="bi bi-heart area-icon"></i>
-                        <h5>Autoestima</h5>
-                    </section>
-                </section>
-            </article>
-
-            <article class="col-md-6 col-lg-4">
-                <section class="card area-card h-100 shadow-sm border-0">
-                    <section class="card-body text-center">
-                        <i class="bi bi-chat-dots area-icon"></i>
-                        <h5>Manejo de emociones</h5>
-                    </section>
-                </section>
-            </article>
-
-            <article class="col-md-6 col-lg-4">
-                <section class="card area-card h-100 shadow-sm border-0">
-                    <section class="card-body text-center">
-                        <i class="bi bi-flower1 area-icon"></i>
-                        <h5>Procesos de duelo</h5>
-                    </section>
-                </section>
-            </article>
-
-            <article class="col-md-6 col-lg-4">
-                <section class="card area-card h-100 shadow-sm border-0">
-                    <section class="card-body text-center">
-                        <i class="bi bi-person-heart area-icon"></i>
-                        <h5>Apoyo emocional</h5>
-                    </section>
-                </section>
-            </article>
-
-        </section>
-
-    </section>
-</section>
-<!-- MENSAJES -->
-<section class="py-5 frases">
-    <section class="container text-center">
-
-        <h2>Mensajes para el alma</h2>
-
-        <p class="text-muted mb-4">
-            Pequeñas reflexiones que acompañan tu proceso emocional
-        </p>
-
-        <section id="frasesCarousel"
-            class="carousel slide carousel-fade carrusel-frases"
-            data-bs-ride="carousel"
-            data-bs-interval="3000">
-
-            <section class="carousel-inner">
-
-                <article class="carousel-item active">
-                    <img src="img/galeria1.jpeg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“Permítete sentir, sanar también es parte del camino.”</p>
-                    </section>
-                </article>
-
-                <article class="carousel-item">
-                    <img src="img/galeria2.jpeg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“Cada emoción tiene algo importante que enseñarnos.”</p>
-                    </section>
-                </article>
-                <article class="carousel-item">
-                    <img src="img/galeria3.jpeg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“Pedir ayuda también es un acto de valentía.”</p>
-                    </section>
-                </article>
-                <article class="carousel-item">
-                    <img src="img/galeria4.jpeg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“La vulnerabilidad es la base de la conexión humana.”</p>
-                    </section>
-                </article>
-                <article class="carousel-item">
-                    <img src="img/galeria5.jpeg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“El perdón es el primer paso hacia la libertad.”</p>
-                    </section>
-                </article>
-                <article class="carousel-item">
-                    <img src="img/galeria6.jpeg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“No tienes que poder con todo tú solo..”</p>
-                    </section>
-                </article>
-                <article class="carousel-item">
-                    <img src="img/galeria7.jpg" class="d-block w-100 frase-img">
-                    <section class="carousel-caption">
-                        <p>“Tu bienestar emocional también es importante.”</p>
-                    </section>
-                </article>
-            </section>
-        </section>
-    </section>
-</section>
+/* Contenido encima */
+.header-bg nav {
+    position: relative;
+    z-index: 1;
+}
 
 
-<!-- CONTACTO -->
-<section class="contact py-5">
-    <section class="container text-center">
-        <h2>Contacto</h2>
+/* MENSAJES PARA EL ALMA */
 
-        <p>
-            <strong>Dirección:</strong><br>
-            Montesinos #1375 entre Guadalupe Victoria y Revillagigedo<br>
-            Col. México C.P. 91756
-        </p>
+.frases{
+    background-color: var(--lila-suave);
+}
 
-        <p>
-            <strong>Horario de atención:</strong><br>
-            Lunes a Viernes: 6:00 p.m. – 8:00 p.m.<br>
-            Sábado: 3:00 p.m. – 6:00 p.m.
-        </p>
-        <p>
-            <strong>Teléfono:</strong><br>
-            2294090953
-    </section>
-</section>
+.carousel-caption{
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px;
+    padding: 15px;
+}
 
-</main>
+.carousel-caption p{
+    font-size: 1.3rem;
+    font-style: italic;
+    color: white;
+}
 
-<footer class="text-white text-center py-4">
+/* carrusel vertical */
 
-    <section class="mb-3 redes">
-        <a href="https://www.facebook.com/psicologaSaraChable" target="_blank">
-            <i class="bi bi-facebook"></i>
-        </a>
+.carrusel-frases{
+    max-width: 400px;
+    margin: auto;
+}
 
-        <a href="https://www.instagram.com/psico_tanat" target="_blank">
-            <i class="bi bi-instagram"></i>
-        </a>
+.frase-img{
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+/* CONTACTO EN DOS COLUMNAS */
+.contact p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
 
-        <a href="https://wa.me/522294090953" target="_blank">
-            <i class="bi bi-whatsapp"></i>
-        </a>
-    </section>
+/* BOTÓN WHATSAPP */
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    <p class="mb-0">
-        © 2026 Psic. Sara Margarita Sánchez Chablé | Psicotanatología "Por Amor"
-    </p>
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
 
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
+/* MAPA BONITO */
+.mapa iframe {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    height: 100%;
+    min-height: 300px;
+}
